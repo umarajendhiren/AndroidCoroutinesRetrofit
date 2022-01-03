@@ -27,7 +27,7 @@ class ListViewModel : ViewModel() {
     private fun fetchCountries() {
         loading.value = true
 
-        /*here we are using retrofit to get response on background thread.
+        /*here we are using coroutine to get response on background thread.
         (for network communication we need to use IO dispatcher).
         once the response available, we need  that result in the main thread to update UI*/
      job= CoroutineScope(Dispatchers.IO+exceptionHandler).launch {
