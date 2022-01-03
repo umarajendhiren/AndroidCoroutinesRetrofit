@@ -32,6 +32,11 @@ class ListViewModel: ViewModel() {
         countries.add(Country("dummyCountry3",  "dummyCapital3",""))
         countries.add(Country("dummyCountry4",  "dummyCapital4",""))
         countries.add(Country("dummyCountry5",  "dummyCapital5",""))
+        countries.add(Country("dummyCountry1",  "dummyCapital1",""))
+        countries.add(Country("dummyCountry2",  "dummyCapital2",""))
+        countries.add(Country("dummyCountry3",  "dummyCapital3",""))
+        countries.add(Country("dummyCountry4",  "dummyCapital4",""))
+        countries.add(Country("dummyCountry5",  "dummyCapital5",""))
         return countries
     }
 
