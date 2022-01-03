@@ -12,6 +12,13 @@ import com.devtides.coroutinesretrofit.view.CountryListAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    
+/*objective:
+* Glide is to load image from URL.
+* Retrofit allow us to get the response from backend Api
+* Recyclerview to show list of countries
+* lifecycle extension allow as to implement MVVM architecture.
+* coroutine get the response On background thread */
 
     lateinit var viewModel: ListViewModel
     private val countriesAdapter = CountryListAdapter(arrayListOf())
@@ -19,6 +26,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        /*instantiate the viewModel*/
 
         viewModel = ViewModelProviders.of(this).get(ListViewModel::class.java)
         viewModel.refresh()
